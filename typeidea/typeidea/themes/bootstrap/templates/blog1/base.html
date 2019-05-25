@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Blog{% endblock %} - 博客系统</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <style>
+      .bg {
+        background:url(../../static/img/1.jpg) no-repeat ;
+        width:1000px;
+        height:600px;
+      }
+      a{
+        text-decoration:none;
+        color:#000000;
+        }
+    </style>
+
+  </head>
+  <body>
+    <!--导航条-->
+    <div class="container head">
+      <div class="row">
+        <nav class="navbar navbar-inverse">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">首页</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse  navbar-right" id="bs-example-navbar-collapse-1">
+
+              <ul class="nav navbar-nav" >
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sign in</a></li>
+
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+        <!--<div class="row bg">-->
+          <!--<h1>jfkafjkalsjflaksdfjklasfdasfajdf</h1>-->
+            <!--<p class="lead text-center">-->
+              <!--基于Django的多人系统博客-->
+            <!--</p>-->
+        <!--</div>-->
+
+        <div class="center-block">
+          <div class="jumbotron">
+            <h1 class="display-4 text-center">Typeidea</h1>
+            <p class="lead text-center">
+              基于Django的多人系统博客
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--主页内容-->
+    <div class="container main">
+      <div class="row">
+        <div class="col-md-9 post-list">
+          {% block main %}
+          {% endblock %}
+        </div>
+
+        <div class="col-md-3">
+          <h2>Search</h2>
+          <hr>
+          <!--<form class="form-inline">-->
+            <!--<input class="form-control" type="search" placeholder="Search" aria-label="Search">-->
+            <!--<button type="submit" class="btn btn-default">Send invitation</button>-->
+          <!--</form>-->
+
+          <div>
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                  </button>
+                </span>
+                <input type="text" class="form-control" placeholder="Search for...">
+              </div><!-- /input-group -->
+          </div><!-- /.row -->
+
+          <h2>Sidebar</h2>
+          <hr>
+          {% for sidebar in sidebars %}
+          <div class="card-body">
+            <h4 class="card-title">{{ sidebar.title}}</h4>
+            <p>
+              {{ sidebar.content_html}}
+            </p>
+          </div>
+          {% endfor %}
+
+          <h2>Category</h2>
+          <hr>
+          {% for cate in navs %}
+          <li>
+            <a href="{% url 'category-list' cate.id %}">{{ cate.name }}</a>
+          </li>
+          {% endfor%}
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+
+    </div>
+
+
+    <script src="{% static 'jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+  </body>
+</html>
