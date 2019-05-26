@@ -122,12 +122,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static1')
-
+# 设置静态文件
+STATIC_URL = '/static/'   # 映射到static的url中,一般为static
+STATIC_ROOT = os.path.join(BASE_DIR, 'static1')  # 这个是总的static目录,将static收集到一个目录下,运行manage.py collectstatic后静态文件将复制到的目录
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'themes', THEME, 'static')
-]
+]  # 这个是static的列表,收集公共static和各个app下的static
 
 XADMIN_TITLE = '管理后台'
 XADMIN_FOOTER_TITLE = 'power by lighteft@gmail'
