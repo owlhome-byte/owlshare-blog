@@ -19,6 +19,7 @@ from django.contrib.sitemaps import views as sitemap_views
 from django.conf import settings
 from django.conf.urls.static import static
 import xadmin
+from django.views.static import serve
 
 from typeidea.custom_site import custom_site
 from blog.views import IndexView, CategoryView, TagView, PostDetailView,SearchView, AuthorView
@@ -56,4 +57,6 @@ urlpatterns = [
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^api/', include(router.urls, namespace='api')),
     url(r'^api/docs', include_docs_urls(title='typeidea apis')),
+    url(r'^static/(?P<path>.*)$', serve,
+        {'document_root': settings.STATIC_ROOT}, name='static')  # 解决静态文件加载失败问题
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
