@@ -25,7 +25,7 @@ SECRET_KEY = '+cb%4x6t91et+bp!a2(7e33g7sxlln73#p7m1288uz5mwax!8&'
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.owlshare.top']
+ALLOWED_HOSTS = ['39.100.109.147', '127.0.0.1', 'localhost', '.owlshare.top']
 
 
 # Application definition
