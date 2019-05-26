@@ -6,7 +6,7 @@
         {% if tag %}
         标签页:{{ tag.name }}
         {% elif category %}
-        标签页:{{ category.name }}
+        分类页:{{ category.name }}
         {% endif %}
     </div>
 {% endblock %}
@@ -21,7 +21,6 @@
             <div>
                 <span>作者:{{ post.owner.username }}</span>
                 <span>分类:{{ post.category.name }}</span>
-
             </div>
         </li>
         {% endfor %}

@@ -135,7 +135,7 @@ XADMIN_FOOTER_TITLE = 'power by lighteft@gmail'
 CKEDITOR_CONFIGS={
     'default':{
         'toolbar':'full',
-        'height':300,
+        'height':600,
         'width':800,
         'tabSpaces':4,
         'extraPlugins':'codesnippet',
