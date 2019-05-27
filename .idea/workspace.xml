@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="182af3d8-6f79-41d5-a815-3d53c401bfe8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/typeidea/typeidea/themes/bootstrap/templates/blog/base.html" afterPath="$PROJECT_DIR$/typeidea/typeidea/themes/bootstrap/templates/blog/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/typeidea/typeidea/themes/bootstrap/templates/blog/detail.html" afterPath="$PROJECT_DIR$/typeidea/typeidea/themes/bootstrap/templates/blog/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/typeidea/typeidea/themes/bootstrap/templates/blog/list.html" afterPath="$PROJECT_DIR$/typeidea/typeidea/themes/bootstrap/templates/blog/list.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/typeidea/typeidea/themes/bootstrap/templates/blog/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
-              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -991,7 +989,7 @@
     <entry file="file://$PROJECT_DIR$/typeidea/typeidea/themes/bootstrap/templates/blog/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
           <folding />
         </state>
       </provider>
